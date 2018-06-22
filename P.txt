@@ -1,0 +1,19 @@
+<?php
+ // created: 2018-05-25 14:57:02
+$dictionary['AOS_Invoices']['fields']['payment_date_c']['name']='payment_date_c';
+$dictionary['AOS_Invoices']['fields']['payment_date_c']['vname']='LBL_PAYMENT_DATE_C';
+$dictionary['AOS_Invoices']['fields']['payment_date_c']['type']='datetime';
+$dictionary['AOS_Invoices']['fields']['payment_date_c']['enable_range_search']=true;
+$dictionary['AOS_Invoices']['fields']['payment_date_c']['options']='date_range_search_dom';
+$dictionary['AOS_Invoices']['fields']['payment_date_c']['inline_edit']=true;
+$dictionary['AOS_Invoices']['fields']['payment_date_c']['merge_filter']='disabled';
+
+ ?>
+
+
+	global $db;
+	$query_check="select id from aos_invoices where number='".$_REQUEST['invoice_number']."' AND deleted=0 AND id!='".$_REQUEST['record_id']."' ";
+	$result=$db->query($query_check);
+	$countRow=$db->getAffectedRowCount($result);
+	print $countRow;
+?>
