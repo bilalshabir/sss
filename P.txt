@@ -10,7 +10,7 @@ $dictionary['AOS_Invoices']['fields']['payment_date_c']['merge_filter']='disable
 
  ?>
 
-clknfmfkjasmfbajs f,mbda fmndsbnmfbmbmnbmn
+
 	global $db;
 	$query_check="select id from aos_invoices where number='".$_REQUEST['invoice_number']."' AND deleted=0 AND id!='".$_REQUEST['record_id']."' ";
 	$result=$db->query($query_check);
